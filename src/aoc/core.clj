@@ -1,7 +1,8 @@
 (ns aoc.core
   (:require [clojure.java.io :as io]
             [aoc.day01 :as day01]
-            [aoc.day02 :as day02]))
+            [aoc.day02 :as day02]
+            [aoc.day03 :as day03]))
 
 (defn read-input
   "Read the given day's newline separated puzzle input a lazy sequence of strings"
@@ -17,4 +18,6 @@
     "01b" (println (day01/b (read-input "day01.txt")))
     "02a" (println (day02/a (read-input "day02.txt")))
     "02b" (println (day02/b (read-input "day02.txt")))
+    "03a" (println (day03/a (read-input "day03.txt")))
+    "03b" (println (day03/b (read-input "day03.txt")))
     (println "Solution not found")))
