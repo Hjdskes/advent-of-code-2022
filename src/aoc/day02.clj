@@ -1,23 +1,15 @@
-(ns aoc.day02
-  (:require [clojure.string :as string]))
+(ns aoc.day02)
 
-(def lookup-table-a {:AX 4, :AY 8, :AZ 3, :BX 1, :BY 5, :BZ 9, :CX 7, :CY 2, :CZ 6})
+(def lookup-table-a {"A X" 4, "A Y" 8, "A Z" 3, "B X" 1, "B Y" 5, "B Z" 9, "C X" 7, "C Y" 2, "C Z" 6})
 
-(def lookup-table-b {:AX 3, :AY 4, :AZ 8, :BX 1, :BY 5, :BZ 9, :CX 2, :CY 6, :CZ 7})
-
-(defn parse [input]
-  (->> input
-       (map #(string/replace % " " ""))
-       (map keyword)))
+(def lookup-table-b {"A X" 3, "A Y" 4, "A Z" 8, "B X" 1, "B Y" 5, "B Z" 9, "C X" 2, "C Y" 6, "C Z" 7})
 
 (defn a [input]
   (->> input
-       parse
-       (map #(get lookup-table-a %))
+       (map lookup-table-a)
        (apply +)))
 
 (defn b [input]
   (->> input
-       parse
-       (map #(get lookup-table-b %))
+       (map lookup-table-b)
        (apply +)))
