@@ -1,0 +1,13 @@
+# Clojure
+.lsp
+.clj-kondo
+.calva
+.lsp
+target/
+
+# Nix
+result
+result-*
+
+# Direnv
+.direnv
