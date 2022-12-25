@@ -3,7 +3,8 @@
             [aoc.day01 :as day01]
             [aoc.day02 :as day02]
             [aoc.day03 :as day03]
-            [aoc.day04 :as day04]))
+            [aoc.day04 :as day04]
+            [aoc.day05 :as day05]))
 
 (defn read-input
   "Read the given day's newline separated puzzle input a lazy sequence of strings"
@@ -23,4 +24,6 @@
     "03b" (println (day03/b (read-input "day03.txt")))
     "04a" (println (day04/a (read-input "day04.txt")))
     "04b" (println (day04/b (read-input "day04.txt")))
+    "05a" (println (day05/a (read-input "day05.txt")))
+    "05b" (println (day05/b (read-input "day05.txt")))
     (println "Solution not found")))
